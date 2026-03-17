@@ -1,0 +1,33 @@
+** Organisation
+
+This repository is used for both upstream and Debian work.
+
+Debian work is done on =debian/latest= branch.
+
+Upstream is done on =main= branch and pushed to GitLab.
+
+There's is no pristine-tar branch.
+
+** Build
+
+Build is done with =Dist::Zilla= when packaging.
+
+** Import new version
+
+First merge new upstream version:
+
+#+BEGIN_SRC shell :results verbatim
+git merge main
+#+END_SRC
+
+#+RESULTS:
+
+When done with modifications of debian files, run:
+#+BEGIN_SRC shell :results verbatim
+gbp dch -Ra --commit
+#+END_SRC
+
+** Push your work
+
+Assuming =debian= is the remote targeting salsa, use =gbp push debian=
+to push package files (and main branch) on salsa.

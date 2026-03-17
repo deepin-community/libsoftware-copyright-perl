@@ -1,0 +1,39 @@
+Description: Don't run synopsis tests during autopkgtest.
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2022-08-22
+
+--- a/t/copyright.t
++++ b/t/copyright.t
+@@ -10,7 +10,7 @@
+ 
+ require_ok( 'Software::Copyright' );
+ 
+-synopsis_ok('lib/Software/Copyright.pm');
++synopsis_ok('lib/Software/Copyright.pm') unless $ENV{AUTOPKGTEST_TMP};
+ 
+ my @tests = (
+     [
+--- a/t/owner.t
++++ b/t/owner.t
+@@ -10,7 +10,7 @@
+ 
+ require_ok('Software::Copyright::Owner');
+ 
+-synopsis_ok('lib/Software/Copyright/Owner.pm');
++synopsis_ok('lib/Software/Copyright/Owner.pm') unless $ENV{AUTOPKGTEST_TMP};
+ 
+ subtest "just a name" => sub {
+     my $owner = Software::Copyright::Owner->new("Marcel");
+--- a/t/statement.t
++++ b/t/statement.t
+@@ -8,7 +8,7 @@
+ 
+ require_ok('Software::Copyright::Statement');
+ 
+-synopsis_ok('lib/Software/Copyright/Statement.pm');
++synopsis_ok('lib/Software/Copyright/Statement.pm') unless $ENV{AUTOPKGTEST_TMP};
+ 
+ sub new_st($str) {
+     return Software::Copyright::Statement->new($str);

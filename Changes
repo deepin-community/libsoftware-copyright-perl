@@ -1,0 +1,70 @@
+{{$NEXT}}
+
+0.015 2025-04-05
+
+    * fix Software::Copyright:_create_or_merge function
+      (Debian bug #1101987)
+
+0.014 2024-12-23
+
+    * handle copyright year range like 2011-.. or 2023-20**
+
+0.013 2024-01-13
+
+    * Fix test crash on older perl
+
+0.012 2023-09-27
+
+    * refine copyright cleanup
+
+0.011 2023-09-24
+
+    * ensure garbage in, garbage out mode (Debian #1052168)
+    * improve statement cleanup
+
+0.010 2023-06-15
+
+    * reduce verbosity of invalid year range warning
+    
+0.009 2023-05-25
+
+    * fix compat wih with < 5.028
+
+0.008 2023-05-24
+
+    * clean copyright: also cleanup (C)
+    * handle copyright specified with full date
+    * add missing use Time::localtime
+
+0.007 2022-12-30
+
+    * Fix test failure on perl 5.20
+
+0.006 2022-12-29
+
+    * Copyright: add contains method
+
+0.005 2022-11-11
+
+    * Copyright: handle statements that contain only year information
+    * Copyright::Statement:
+      * add add_years method
+      * merge method now returns $self
+      * handle statements that contain only year information
+
+0.004 2022-08-11
+
+    * dist.ini: removed unused plugin
+
+0.003 2022-07-25
+
+    * add missing MouseX::NativeTraits dependency
+
+0.002 2022-07-23
+
+    * all tests: require module before testing synopsis (HEAD -> main)
+    * Copyright: quote subtype
+
+0.001 2022-07-22
+
+* Initial release
