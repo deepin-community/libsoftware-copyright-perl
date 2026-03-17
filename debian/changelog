@@ -1,5 +1,146 @@
-template-repository (1.0-1) unstable; urgency=medium
+libsoftware-copyright-perl (0.015-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
+    * fix _create_or_merge function (Closes: #1101987)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Dominique Dumont <dod@debian.org>  Mon, 07 Apr 2025 11:21:36 +0200
+
+libsoftware-copyright-perl (0.014-1) unstable; urgency=medium
+
+  * New upstream release:
+    * handle copyright year range like 2023-20**
+    * handle copyright year range like 2011-..
+  * control: add missing ${perl:Depends} variable
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 08 Mar 2025 17:16:17 +0100
+
+libsoftware-copyright-perl (0.012-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update debian/watch to Gitlab changes.
+  * Declare compliance with Debian Policy 4.7.2.
+  * This upload hopefully closes: #1099361 (rebuild issue).
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 04 Mar 2025 15:05:50 +0100
+
+libsoftware-copyright-perl (0.012-2) unstable; urgency=medium
+
+  * control: add Breaks libconfig-model-dpkg-perl (<= 3.001)
+  * rules: cleanup modification done to dist.ini
+    (Closes: #1046012, #1049584)
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 10 Oct 2023 18:27:16 +0200
+
+libsoftware-copyright-perl (0.012-1) unstable; urgency=medium
+
+  * New upstream release:
+    * Owner: don't throw away unexpected strings (Closes: 1052168)
+    * Statement cleanup: remove "copyright" surrounded by non alpha chars
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 28 Sep 2023 18:48:15 +0200
+
+libsoftware-copyright-perl (0.010-1) unstable; urgency=medium
+
+  * New upstream release:
+    * reduce verbosity of invalid year range warning
+
+ -- Dominique Dumont <dod@debian.org>  Fri, 16 Jun 2023 12:51:24 +0200
+
+libsoftware-copyright-perl (0.008-1) unstable; urgency=medium
+
+  * New upstream release:
+    * clean copyright: also cleanup (C)
+    * handle copyright specified with full date
+    * add missing use Time::localtime
+  * control: declare compliance with policy 4.6.2
+  * control: add dependency on libtimedate-perl
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 24 May 2023 19:11:24 +0200
+
+libsoftware-copyright-perl (0.007-1) unstable; urgency=medium
+
+  * New upstream release:
+    * Copyright: add contains method
+  * refresh autopkgtest patch
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 29 Dec 2022 16:40:00 +0100
+
+libsoftware-copyright-perl (0.005-2) unstable; urgency=medium
+
+  * re-release to include changes done in 0.004-2 to 0.004-4. Sorry about
+    the mess
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 12 Nov 2022 18:29:34 +0100
+
+libsoftware-copyright-perl (0.005-1) unstable; urgency=medium
+
+  * New upstream release:
+    * Copyright: handle statements that contain only year information
+    * Copyright::Statement:
+      * add add_years method
+      * merge method now returns $self
+      * handle statements that contain only year information
+  * refresh rm-git-from-dzil patch
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 12 Nov 2022 18:15:48 +0100
+
+libsoftware-copyright-perl (0.004-4) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 15 Oct 2022 19:49:30 +0100
+
+libsoftware-copyright-perl (0.004-3) unstable; urgency=medium
+
+  * Team upload.
+  * Move Dist::Zilla plugins from Build-Depends-Indep to Build-Depends
+    and remove their '<!nocheck>'annotations.
+    `dh clean' calls `dzil clean' which fails if the plugins are not
+    available.
+    Also move libmodule-build-perl which is used by `dzil build'.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 02 Oct 2022 13:52:41 +0200
+
+libsoftware-copyright-perl (0.004-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add debian/patches/autopkgtest to fix autopkgtest failures.
+    Skip synopsis tests, as during autopkgtest the source tree is not
+    available, so the tests fail. While we could adjust the paths, these tests
+    are more release/author tests anyway.
+  * Mention module name in long description.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 22 Aug 2022 09:09:06 +0200
+
+libsoftware-copyright-perl (0.004-1) unstable; urgency=medium
+
+  * New upstream version
+    * dist.ini: remove unused Test::Synopsis plugin
+  * control:
+    * fix salsa URls
+    * add missing build dependencies
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 11 Aug 2022 15:08:23 +0200
+
+libsoftware-copyright-perl (0.003-2) unstable; urgency=medium
+
+  * upload as source package
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 04 Aug 2022 14:10:43 +0200
+
+libsoftware-copyright-perl (0.003-1) unstable; urgency=medium
+
+  * new upstream version
+  * control: fix source package name
+  * control: add libmousex-nativetraits-perl dependency
+  * add README.source.org
+  * gbp.conf: specify that main is used as upstream branch
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 26 Jul 2022 18:56:30 +0200
+
+libsoftware-copyright-perl (0.002-1) unstable; urgency=medium
+
+  * initial release
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 23 Jul 2022 17:39:13 +0200
